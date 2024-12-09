@@ -1,4 +1,4 @@
-# FeatureReplacement
+# FeatureReplacement Introduction
 This program is designed for use in research and data sharing. It loads a video of a person performing a motor exercise and outputs an annonymized video. 
 
 The video is annonymied using DeepFake AI, swapping the facial features of the original person with the features of a fake AI generated person. Recognizable features are in this way removed, but the the facial expressions and mimicry relevant for research is preserved. 
