@@ -10,6 +10,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 ```
 Or install it with .pkg file though following link: https://github.com/Homebrew/brew/releases/latest
 
+
 ## Install python packages through Homebrew
 ```
 $ brew install pyinstaller
@@ -17,6 +18,7 @@ $ brew install opencv
 $ brew install matplotlib
 $ brew install python-tk@3.12
 ```
+
 ## Install python pip packages that does not exist in Homebrew into the Homebrew environment 
 ```
 $ python -m pip install insightface --break-system-packages
@@ -25,6 +27,7 @@ $ python -m pip install moviepy --break-system-packages
 $ python -m pip install PythonVideoConverter --break-system-packages
 $ python -m pip install customtkinter --break-system-packages
 $ python -m pip install tkinter --break-system-packages
+
 ```
 
 ## Make python3 refer to Homebrew python
@@ -50,17 +53,23 @@ $ source ~/.zprofile
 `./target-video.mp4`
 `./feature-replacement.py`
 
+
 ## Check if the program runs
 ´´´
 $ python3 feature-replacement.py 
 ´´´
 
+
 ## Transform it into .exe file 
 First install pyinstaller
 ```
 $ sudo -i         
+```
+(apparently you have to be root in order to install it correctly)
+```
 $ brew install pyinstaller
 ```
+
 Now create the .spec file 
 ```
 $ pyinstaller --clean -y -n "feature-replacement" --add-data="Files/.":"Files" feature-replacement.py -w
@@ -92,7 +101,6 @@ a.datas += Tree("/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.
 
 ...
 ```
-
 To reference the embedded folder in python write the following: 
 ```
 if getattr(sys, 'frozen', False):    # Evaluates only to True if the program is run as .exe
